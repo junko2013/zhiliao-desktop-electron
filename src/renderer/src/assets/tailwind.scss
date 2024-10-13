@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//不可拖动
+@layer base {
+
+  input,
+  button,
+  a,
+  select{
+    @apply non-draggable;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+body * {
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+body {
+    font-family: PingFangSC-Regular, Roboto, Helvetica Neue, Helvetica, Tahoma,
+        Arial, PingFang SC-Light, Microsoft YaHei;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    background-color: transparent;
+    border: 0;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 1px solid transparent;
+    outline: none;
+    background-color: transparent;
+}
+
+button:active {
+    opacity: 0.6;
+}
+
+.van-nav-bar__left:active,
+.van-nav-bar__right:active {
+    opacity: 1;
+}
+
+[class*='van-']::after {
+    border-bottom: 0;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-center {
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+.justify-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.justify-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.justify-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.justify-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.align-start {
+    display: flex;
+    align-items: flex-start;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.align-end {
+    display: flex;
+    align-items: flex-end;
+}
+
+.rotating {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

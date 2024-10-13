@@ -1,0 +1,13 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+  "module": "node16", 
+  "moduleResolution": "node16",
+  "include": ["electron.vite.config.*", "src/main/**/*", "src/preload/**/*","src/shared", "src/renderer/src/db/api.ts"],
+  "compilerOptions": {
+    "composite": true,
+    "types": ["electron-vite/node"],
+    "paths": {
+      "@shared/*": ["./src/shared/*"]
+    }
+  }
+}
