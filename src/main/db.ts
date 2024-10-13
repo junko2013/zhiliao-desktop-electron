@@ -38,7 +38,8 @@ export const execute = async (e, sqlstr, params, method) => {
 }
 
 export const runMigrate = async () => {
+  console.log(path.join(__dirname, '../../drizzle'))
   migrate(db, {
-    migrationsFolder: path.join(__dirname, '../drizzle')
+    migrationsFolder: path.join(__dirname, '../../drizzle')
   })
 }
